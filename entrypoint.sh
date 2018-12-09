@@ -1,5 +1,3 @@
 #!/bin/sh
-echo "Hello World!"
-sh -c "chmod +x gradlew"
-sh -c "./gradlew --version"
+chmod +x gradlew
 sh -c "./gradlew $*"
