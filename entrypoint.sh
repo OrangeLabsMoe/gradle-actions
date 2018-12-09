@@ -2,4 +2,4 @@
 set -e
 chmod +x gradlew
 ./gradlew --version
-./gradlew "$*"
+sh -c "./gradlew $*"
