@@ -9,6 +9,6 @@ LABEL "com.github.actions.description"="Executes single Gradle task"
 LABEL "com.github.actions.icon"="refresh-cw"
 LABEL "com.github.actions.color"="green"
 
-COPY "entrypoint.sh" "/entrypoint.sh"
+ADD "entrypoint.sh" "/entrypoint.sh"
 
 ENTRYPOINT ["/entrypoint.sh"]
