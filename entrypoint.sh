@@ -1,5 +1,5 @@
 #!/bin/sh
 set -e
-chmod +x gradlew
-./gradlew --version
+sh -c "chmod +x gradlew"
+sh -c "./gradlew --version"
 sh -c "./gradlew $*"
