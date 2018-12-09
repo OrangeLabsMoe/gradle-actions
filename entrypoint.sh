@@ -1,4 +1,4 @@
 #!/bin/sh
-chmod +x filename.sh
+chmod +x gradlew
 ./gradlew --version
 ./gradlew "$*"
