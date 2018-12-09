@@ -1,4 +1,4 @@
-FROM openjdk:11-jdk
+FROM openjdk:11-jdk-slim
 
 LABEL maintainer="Ramil Khamitov <qwertyppp11@gmail.com>"
 LABEL repository="https://github.com/mrramych/gradle-actions"
