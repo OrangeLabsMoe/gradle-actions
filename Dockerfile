@@ -7,7 +7,7 @@ LABEL version="1.0.0"
 
 LABEL com.github.actions.name="Execute Gradle task"
 LABEL com.github.actions.description="Executes single Gradle task"
-LABEL com.github.actions.icon="package"
+LABEL com.github.actions.icon="play"
 LABEL com.github.actions.color="green"
 
 COPY "entrypoint.sh" "/entrypoint.sh"
