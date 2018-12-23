@@ -15,7 +15,7 @@ workflow "Push" {
   resolves = ["Test"]
 }
 
-action "Test ProtoObj" {
+action "Test" {
   uses = "MrRamych/gradle-actions@master"
   args = "test"
 }
