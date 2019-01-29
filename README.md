@@ -1,4 +1,7 @@
 # Github Actions for Gradle
+
+[![GitHubActions](https://img.shields.io/badge/listed%20on-GitHubActions-blue.svg)](https://github-actions.netlify.com/gradle)
+
 Execute  [Gradle](https://github.com/gradle/gradle) task using wrapper.
 
 ## Usage
