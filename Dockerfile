@@ -12,4 +12,4 @@ LABEL "com.github.actions.color"="green"
 
 COPY "entrypoint.sh" "/entrypoint.sh"
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["javac --version"]
+CMD ["check"]
