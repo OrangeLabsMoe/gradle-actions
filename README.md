@@ -13,7 +13,8 @@ JDK|Image
 OpenJDK 11|`MrRamych/gradle-actions@openjdk-11-v1.0`
 OpenJDK 8|`MrRamych/gradle-actions@openjdk-8-v1.0`
 
-`args` attribute represents the task to execute. If not specified, `check` task is executed.
+`args` attribute represents the task to execute. 
+If not specified, `check` task is executed.
 
 ## Examples
 
