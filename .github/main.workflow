@@ -7,9 +7,9 @@ workflow "Push" {
 }
 
 action "Test Library OpenJDK 8" {
-  uses = "MrRamych/gradle-actions@openjdk-8"
+  uses = "MrRamych/gradle-actions@check-as-default-task"
 }
 
 action "Test Library OpenJDK 11" {
-  uses = "MrRamych/gradle-actions@openjdk-11"
+  uses = "MrRamych/gradle-actions@check-as-default-task"
 }
