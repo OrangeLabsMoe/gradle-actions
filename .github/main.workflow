@@ -15,3 +15,4 @@ action "Test Library OpenJDK 11" {
   uses = "MrRamych/gradle-actions/openjdk-11@2.0"
   args = "test"
 }
+
