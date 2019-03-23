@@ -10,8 +10,9 @@ Choose JDK and image:
 
 JDK|Image
 ---|---
-OpenJDK 11|`MrRamych/gradle-actions/openjdk-11@2.0`
-OpenJDK 8|`MrRamych/gradle-actions/openjdk-8@2.0`
+OpenJDK 12|`MrRamych/gradle-actions/openjdk-12@2.1`
+OpenJDK 11|`MrRamych/gradle-actions/openjdk-11@2.1`
+OpenJDK 8|`MrRamych/gradle-actions/openjdk-8@2.1`
 
 `args` attribute represents the task to execute. 
 If not specified, `check` task is executed.
@@ -27,8 +28,23 @@ workflow "Push" {
 }
 
 action "Test" {
-  uses = "MrRamych/gradle-actions/openjdk-11@2.0"
+  uses = "MrRamych/gradle-actions/openjdk-12@2.1"
   args = "test"
+}
+```
+
+### OpenJDK 12
+
+```hcl
+action "Check" {
+  uses = "MrRamych/gradle-actions/openjdk-12@2.1"
+}
+```
+
+```hcl
+action "My tasks" {
+  uses = "MrRamych/gradle-actions/openjdk-12@2.1"
+  args = "task1 task2"
 }
 ```
 
@@ -36,13 +52,13 @@ action "Test" {
 
 ```hcl
 action "Check" {
-  uses = "MrRamych/gradle-actions/openjdk-11@2.0"
+  uses = "MrRamych/gradle-actions/openjdk-11@2.1"
 }
 ```
 
 ```hcl
 action "My tasks" {
-  uses = "MrRamych/gradle-actions/openjdk-11@2.0"
+  uses = "MrRamych/gradle-actions/openjdk-11@2.1"
   args = "task1 task2"
 }
 ```
@@ -51,12 +67,12 @@ action "My tasks" {
 
 ```hcl
 action "Check" {
-  uses = "MrRamych/gradle-actions/openjdk-8@2.0"
+  uses = "MrRamych/gradle-actions/openjdk-8@2.1"
 }
 ```
 
 ```hcl
 action "My tasks" {
-  uses = "MrRamych/gradle-actions/openjdk-8@2.0"
+  uses = "MrRamych/gradle-actions/openjdk-8@2.1"
   args = "task1 task2"
 }
