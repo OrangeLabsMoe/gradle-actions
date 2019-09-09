@@ -1,0 +1,21 @@
+on: push
+name: Lint on push
+jobs:
+  shellLint:
+    name: Shell lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: bltavares/actions/shfmt@master
+  dockerlint:
+    name: Dockerfile lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: bltavares/actions/hadolint@master
+  markdownlint:
+    name: Markdown lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: bltavares/actions/mdlint@master
