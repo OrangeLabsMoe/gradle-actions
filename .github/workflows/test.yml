@@ -1,14 +1,14 @@
 on: [push, pull_request]
-name: Push
-strategy:
-  matrix:
-    java:
-      - 8
-      - 11
-      - 12
+name: Test
 jobs:
   testLibrary:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java:
+          - 8
+          - 11
+          - 12
     steps:
     - uses: actions/checkout@master
     #Simple
