@@ -10,69 +10,70 @@ Choose JDK and image:
 
 JDK|Image
 ---|---
-OpenJDK 12|`MrRamych/gradle-actions/openjdk-12@2.1`
-OpenJDK 11|`MrRamych/gradle-actions/openjdk-11@2.1`
-OpenJDK 8|`MrRamych/gradle-actions/openjdk-8@2.1`
+OpenJDK 12|`MrRamych/gradle-actions/openjdk-12@3.0`
+OpenJDK 11|`MrRamych/gradle-actions/openjdk-11@3.0`
+OpenJDK 8|`MrRamych/gradle-actions/openjdk-8@3.0`
 
 `args` attribute represents the task to execute.
 If not specified, `check` task is executed.
 
 ## Examples
 
-An example `main.workflow` file to run tests on push.
+An example `test.yml` file to run tests on push and pull requests.
 
-```hcl
-workflow "Push" {
-  on = "push"
-  resolves = ["Test"]
-}
-
-action "Test" {
-  uses = "MrRamych/gradle-actions/openjdk-12@2.1"
-  args = "test"
-}
+```yaml
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: MrRamych/gradle-actions/openjdk-12@3.0
+      with:
+        args: test
 ```
 
 ### OpenJDK 12
 
-```hcl
-action "Check" {
-  uses = "MrRamych/gradle-actions/openjdk-12@2.1"
-}
+Execute default task `check`
+
+```yaml
+- uses: MrRamych/gradle-actions/openjdk-12@3.0
 ```
 
-```hcl
-action "My tasks" {
-  uses = "MrRamych/gradle-actions/openjdk-12@2.1"
-  args = "task1 task2"
-}
+Execute custom tasks
+```yaml
+- uses: MrRamych/gradle-actions/openjdk-12@3.0
+  with:
+    args: task1 task2
 ```
 
 ### OpenJDK 11
 
-```hcl
-action "Check" {
-  uses = "MrRamych/gradle-actions/openjdk-11@2.1"
-}
+Execute default task `check`
+
+```yaml
+- uses: MrRamych/gradle-actions/openjdk-11@3.0
 ```
 
-```hcl
-action "My tasks" {
-  uses = "MrRamych/gradle-actions/openjdk-11@2.1"
-  args = "task1 task2"
-}
+Execute custom tasks
+```yaml
+- uses: MrRamych/gradle-actions/openjdk-11@3.0
+  with:
+    args: task1 task2
 ```
 
 ### OpenJDK 8
 
-```hcl
-action "Check" {
-  uses = "MrRamych/gradle-actions/openjdk-8@2.1"
-}
+Execute default task `check`
+
+```yaml
+- uses: MrRamych/gradle-actions/openjdk-8@3.0
 ```
 
-```hcl
-action "My tasks" {
-  uses = "MrRamych/gradle-actions/openjdk-8@2.1"
-  args = "task1 task2"
-}
+Execute custom tasks
+```yaml
+- uses: MrRamych/gradle-actions/openjdk-8@3.0
+  with:
+    args: task1 task2
+```
