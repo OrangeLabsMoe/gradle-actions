@@ -1,27 +1,27 @@
 on: [push, pull_request]
 name: Push
+strategy:
+  matrix:
+    java:
+      - 8
+      - 11
+      - 12
 jobs:
-  testLibraryOpenJDK12:
-    name: Test Library with OpenJDK 12
+  testLibrary:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - uses: MrRamych/gradle-actions/openjdk-12@migrate-to-new-syntax
+    #Simple
+    - uses: MrRamych/gradle-actions/openjdk-${{ matrix.java }}@migrate-to-new-syntax
       with:
-        args: test --stacktrace
-  testLibraryOpenJDK11:
-    name: Test Library with OpenJDK 11
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: MrRamych/gradle-actions/openjdk-12@migrate-to-new-syntax
-        with:
-          args: test --stacktrace
-  testLibraryOpenJDK8:
-    name: Test Library with OpenJDK 8
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: MrRamych/gradle-actions/openjdk-12@migrate-to-new-syntax
-        with:
-          args: test --stacktrace
+        args: test
+    #Default task
+    - uses: MrRamych/gradle-actions/openjdk-${{ matrix.java }}@migrate-to-new-syntax
+    #Multiple task
+    - uses: MrRamych/gradle-actions/openjdk-${{ matrix.java }}@migrate-to-new-syntax
+      with:
+        args: build test
+    #Mutiple task YAML way
+    - uses: MrRamych/gradle-actions/openjdk-${{ matrix.java }}@migrate-to-new-syntax
+      with:
+        args: build test
