@@ -1,5 +1,5 @@
-on: [push, pull_request]
-name: Lint on push
+on: push
+name: Lint files
 jobs:
   shellLint:
     name: Shell lint
