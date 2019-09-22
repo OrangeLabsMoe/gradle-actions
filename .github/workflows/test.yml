@@ -1,27 +1,63 @@
 on: [push, pull_request]
 name: Test
 jobs:
-  testLibrary:
+  testOpenJDK8:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        action:
-          - MrRamych/gradle-actions/openjdk-8@migrate-to-new-syntax
-          - MrRamych/gradle-actions/openjdk-11@migrate-to-new-syntax
-          - MrRamych/gradle-actions/openjdk-12@migrate-to-new-syntax
     steps:
     - uses: actions/checkout@master
     #Simple
-    - uses: ${{ matrix.action }}
+    - uses: MrRamych/gradle-actions/openjdk-8@migrate-to-new-syntax
       with:
         args: test
     #Default task
-    - uses: ${{ matrix.action }}
+    - uses: MrRamych/gradle-actions/openjdk-8@migrate-to-new-syntax
     #Multiple task
-    - uses: ${{ matrix.action }}
+    - uses: MrRamych/gradle-actions/openjdk-8@migrate-to-new-syntax
       with:
         args: build test
     #Mutiple task YAML way
-    - uses: ${{ matrix.action }}
+    - uses: MrRamych/gradle-actions/openjdk-8@migrate-to-new-syntax
       with:
-        args: build test
+        args:
+          - build
+          - test
+  testOpenJDK11:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      #Simple
+      - uses: MrRamych/gradle-actions/openjdk-11@migrate-to-new-syntax
+        with:
+          args: test
+      #Default task
+      - uses: MrRamych/gradle-actions/openjdk-11@migrate-to-new-syntax
+      #Multiple task
+      - uses: MrRamych/gradle-actions/openjdk-11@migrate-to-new-syntax
+        with:
+          args: build test
+      #Mutiple task YAML way
+      - uses: MrRamych/gradle-actions/openjdk-11@migrate-to-new-syntax
+        with:
+          args:
+            - build
+            - test
+  testOpenJDK12:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      #Simple
+      - uses: MrRamych/gradle-actions/openjdk-12@migrate-to-new-syntax
+        with:
+          args: test
+      #Default task
+      - uses: MrRamych/gradle-actions/openjdk-12@migrate-to-new-syntax
+      #Multiple task
+      - uses: MrRamych/gradle-actions/openjdk-12@migrate-to-new-syntax
+        with:
+          args: build test
+      #Mutiple task YAML way
+      - uses: MrRamych/gradle-actions/openjdk-12@migrate-to-new-syntax
+        with:
+          args:
+            - build
+            - test
