@@ -1,0 +1,27 @@
+on: [push, pull_request]
+name: Push
+jobs:
+  testLibraryOpenJDK12:
+    name: Test Library with OpenJDK 12
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: MrRamych/gradle-actions/openjdk-12@openjdk-12
+      with:
+        args: test --stacktrace
+  testLibraryOpenJDK11:
+    name: Test Library with OpenJDK 11
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: MrRamych/gradle-actions/openjdk-12@openjdk-11
+        with:
+          args: test --stacktrace
+  testLibraryOpenJDK8:
+    name: Test Library with OpenJDK 8
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: MrRamych/gradle-actions/openjdk-12@openjdk-8
+        with:
+          args: test --stacktrace
