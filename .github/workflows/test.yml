@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     #Simple
-    - uses: MrRamych/gradle-actions/openjdk-${{ matrix.java }}@migrate-to-new-syntax
+    - uses: "MrRamych/gradle-actions/openjdk-${{ matrix.java }}@migrate-to-new-syntax"
       with:
         args: test
     #Default task
