@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - uses: MrRamych/gradle-actions/openjdk-12@openjdk-12
+    - uses: MrRamych/gradle-actions/openjdk-12@2.1
       with:
         args: test --stacktrace
   testLibraryOpenJDK11:
@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: MrRamych/gradle-actions/openjdk-12@openjdk-11
+      - uses: MrRamych/gradle-actions/openjdk-12@2.1
         with:
           args: test --stacktrace
   testLibraryOpenJDK8:
@@ -22,6 +22,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: MrRamych/gradle-actions/openjdk-12@openjdk-8
+      - uses: MrRamych/gradle-actions/openjdk-12@2.1
         with:
           args: test --stacktrace
