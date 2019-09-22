@@ -42,6 +42,7 @@ Execute default task `check`
 ```
 
 Execute custom tasks
+
 ```yaml
 - uses: MrRamych/gradle-actions/openjdk-12@3.0
   with:
@@ -57,6 +58,7 @@ Execute default task `check`
 ```
 
 Execute custom tasks
+
 ```yaml
 - uses: MrRamych/gradle-actions/openjdk-11@3.0
   with:
@@ -72,6 +74,7 @@ Execute default task `check`
 ```
 
 Execute custom tasks
+
 ```yaml
 - uses: MrRamych/gradle-actions/openjdk-8@3.0
   with:
