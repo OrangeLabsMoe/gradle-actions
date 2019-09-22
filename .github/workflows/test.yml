@@ -15,12 +15,6 @@ jobs:
     - uses: MrRamych/gradle-actions/openjdk-8@migrate-to-new-syntax
       with:
         args: build test
-    #Mutiple task YAML way
-    - uses: MrRamych/gradle-actions/openjdk-8@migrate-to-new-syntax
-      with:
-        args:
-          - build
-          - test
   testOpenJDK11:
     runs-on: ubuntu-latest
     steps:
@@ -35,12 +29,6 @@ jobs:
       - uses: MrRamych/gradle-actions/openjdk-11@migrate-to-new-syntax
         with:
           args: build test
-      #Mutiple task YAML way
-      - uses: MrRamych/gradle-actions/openjdk-11@migrate-to-new-syntax
-        with:
-          args:
-            - build
-            - test
   testOpenJDK12:
     runs-on: ubuntu-latest
     steps:
@@ -55,9 +43,3 @@ jobs:
       - uses: MrRamych/gradle-actions/openjdk-12@migrate-to-new-syntax
         with:
           args: build test
-      #Mutiple task YAML way
-      - uses: MrRamych/gradle-actions/openjdk-12@migrate-to-new-syntax
-        with:
-          args:
-            - build
-            - test
