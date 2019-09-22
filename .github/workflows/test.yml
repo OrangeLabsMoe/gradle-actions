@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     #Simple
-    - uses: MrRamych/gradle-actions/openjdk-12@${{ matrix.ver }}
+    - uses: ${{ github.event.repository.owner }}/gradle-actions/openjdk-12@$migrate-to-new-syntax
       with:
         args: test
     #Default task
