@@ -9,10 +9,13 @@ jobs:
           - 8
           - 11
           - 12
+        ver:
+          - 2.1
+          - migrate-to-new-syntax
     steps:
     - uses: actions/checkout@master
     #Simple
-    - uses: "MrRamych/gradle-actions/openjdk-${{ matrix.java }}@migrate-to-new-syntax"
+    - uses: MrRamych/gradle-actions/openjdk-12@${{ matrix.ver }}
       with:
         args: test
     #Default task
