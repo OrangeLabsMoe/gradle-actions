@@ -6,13 +6,13 @@ jobs:
     steps:
     - uses: actions/checkout@master
     #Simple
-    - uses: MrRamych/gradle-actions/openjdk-8@3.0
+    - uses: MrRamych/gradle-actions/openjdk-8@3.1
       with:
         args: test
     #Default task
-    - uses: MrRamych/gradle-actions/openjdk-8@3.0
+    - uses: MrRamych/gradle-actions/openjdk-8@3.1
     #Multiple task
-    - uses: MrRamych/gradle-actions/openjdk-8@3.0
+    - uses: MrRamych/gradle-actions/openjdk-8@3.1
       with:
         args: build test
   testOpenJDK11:
@@ -20,13 +20,13 @@ jobs:
     steps:
       - uses: actions/checkout@master
       #Simple
-      - uses: MrRamych/gradle-actions/openjdk-11@3.0
+      - uses: MrRamych/gradle-actions/openjdk-11@3.1
         with:
           args: test
       #Default task
-      - uses: MrRamych/gradle-actions/openjdk-11@3.0
+      - uses: MrRamych/gradle-actions/openjdk-11@3.1
       #Multiple task
-      - uses: MrRamych/gradle-actions/openjdk-11@3.0
+      - uses: MrRamych/gradle-actions/openjdk-11@3.1
         with:
           args: build test
   testOpenJDK12:
@@ -34,13 +34,13 @@ jobs:
     steps:
       - uses: actions/checkout@master
       #Simple
-      - uses: MrRamych/gradle-actions/openjdk-12@3.0
+      - uses: MrRamych/gradle-actions/openjdk-12@3.1
         with:
           args: test
       #Default task
-      - uses: MrRamych/gradle-actions/openjdk-12@3.0
+      - uses: MrRamych/gradle-actions/openjdk-12@3.1
       #Multiple task
-      - uses: MrRamych/gradle-actions/openjdk-12@3.0
+      - uses: MrRamych/gradle-actions/openjdk-12@3.1
         with:
           args: build test
   testOpenJDK13:
@@ -48,12 +48,12 @@ jobs:
     steps:
       - uses: actions/checkout@master
       #Simple
-      - uses: MrRamych/gradle-actions/openjdk-13@openjdk-13
+      - uses: MrRamych/gradle-actions/openjdk-13@3.1
         with:
           args: test
       #Default task
-      - uses: MrRamych/gradle-actions/openjdk-13@openjdk-13
+      - uses: MrRamych/gradle-actions/openjdk-13@3.1
       #Multiple task
-      - uses: MrRamych/gradle-actions/openjdk-13@openjdk-13
+      - uses: MrRamych/gradle-actions/openjdk-13@3.1
         with:
           args: build test
