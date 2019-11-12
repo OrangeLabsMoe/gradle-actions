@@ -10,9 +10,10 @@ Choose JDK and image:
 
 JDK|Image
 ---|---
-OpenJDK 12|`MrRamych/gradle-actions/openjdk-12@3.0`
-OpenJDK 11|`MrRamych/gradle-actions/openjdk-11@3.0`
-OpenJDK 8|`MrRamych/gradle-actions/openjdk-8@3.0`
+OpenJDK 13|`MrRamych/gradle-actions/openjdk-13@3.1`
+OpenJDK 12|`MrRamych/gradle-actions/openjdk-12@3.1`
+OpenJDK 11|`MrRamych/gradle-actions/openjdk-11@3.1`
+OpenJDK 8|`MrRamych/gradle-actions/openjdk-8@3.1`
 
 `args` attribute represents the task to execute.
 If not specified, `check` task is executed.
@@ -28,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - uses: MrRamych/gradle-actions/openjdk-12@3.0
+    - uses: MrRamych/gradle-actions/openjdk-12@3.1
       with:
         args: test
 ```
@@ -38,13 +39,13 @@ jobs:
 Execute default task `check`
 
 ```yaml
-- uses: MrRamych/gradle-actions/openjdk-12@3.0
+- uses: MrRamych/gradle-actions/openjdk-12@3.1
 ```
 
 Execute custom tasks
 
 ```yaml
-- uses: MrRamych/gradle-actions/openjdk-12@3.0
+- uses: MrRamych/gradle-actions/openjdk-12@3.1
   with:
     args: task1 task2
 ```
@@ -54,13 +55,13 @@ Execute custom tasks
 Execute default task `check`
 
 ```yaml
-- uses: MrRamych/gradle-actions/openjdk-11@3.0
+- uses: MrRamych/gradle-actions/openjdk-11@3.1
 ```
 
 Execute custom tasks
 
 ```yaml
-- uses: MrRamych/gradle-actions/openjdk-11@3.0
+- uses: MrRamych/gradle-actions/openjdk-11@3.1
   with:
     args: task1 task2
 ```
@@ -70,13 +71,13 @@ Execute custom tasks
 Execute default task `check`
 
 ```yaml
-- uses: MrRamych/gradle-actions/openjdk-8@3.0
+- uses: MrRamych/gradle-actions/openjdk-8@3.1
 ```
 
 Execute custom tasks
 
 ```yaml
-- uses: MrRamych/gradle-actions/openjdk-8@3.0
+- uses: MrRamych/gradle-actions/openjdk-8@3.1
   with:
     args: task1 task2
 ```
