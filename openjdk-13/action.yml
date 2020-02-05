@@ -1,8 +1,0 @@
-name: 'Execute Gradle task with OpenJDK 13'
-description: 'Execute Gradle task with OpenJDK 13'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
-brading:
-  icon: 'play'
-  color: 'green'
