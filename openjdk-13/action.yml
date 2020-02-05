@@ -1,8 +1,0 @@
-name: 'Execute Gradle task'
-description: 'Execute Gradle task using wrapper'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
-branding:
-  icon: 'play'
-  color: 'green'
