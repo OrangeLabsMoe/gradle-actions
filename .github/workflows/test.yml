@@ -5,41 +5,53 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    #Simple
+    #One task
     - uses: MrRamych/gradle-actions@v4.0-openjdk-8
       with:
         args: test
     #Default task
     - uses: MrRamych/gradle-actions@v4.0-openjdk-8
-    #Multiple task
+    #Multiple tasks
     - uses: MrRamych/gradle-actions@v4.0-openjdk-8
       with:
         args: build test
+    #version
+    - uses: MrRamych/gradle-actions@v4.0-openjdk-8
+      with:
+        args: --version
   testOpenJDK11:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      #Simple
+      #One task
       - uses: MrRamych/gradle-actions@v4.0-openjdk-11
         with:
           args: test
       #Default task
       - uses: MrRamych/gradle-actions@v4.0-openjdk-11
-      #Multiple task
+      #Multiple tasks
       - uses: MrRamych/gradle-actions@v4.0-openjdk-11
         with:
           args: build test
+      #version
+      - uses: MrRamych/gradle-actions@v4.0-openjdk-8
+        with:
+          args: --version
   testOpenJDK13:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      #Simple
+      #One task
       - uses: MrRamych/gradle-actions@v4.0-openjdk-13
         with:
           args: test
       #Default task
       - uses: MrRamych/gradle-actions@v4.0-openjdk-13
-      #Multiple task
+      #Multiple tasks
       - uses: MrRamych/gradle-actions@v4.0-openjdk-13
         with:
           args: build test
+      #version
+      - uses: MrRamych/gradle-actions@v4.0-openjdk-8
+        with:
+          args: --version
