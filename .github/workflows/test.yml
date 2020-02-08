@@ -34,7 +34,7 @@ jobs:
         with:
           args: build test
       #version
-      - uses: MrRamych/gradle-actions@v4.0-openjdk-8
+      - uses: MrRamych/gradle-actions@v4.0-openjdk-11
         with:
           args: --version
   testOpenJDK13:
@@ -52,6 +52,6 @@ jobs:
         with:
           args: build test
       #version
-      - uses: MrRamych/gradle-actions@v4.0-openjdk-8
+      - uses: MrRamych/gradle-actions@v4.0-openjdk-13
         with:
           args: --version
