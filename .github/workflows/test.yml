@@ -6,17 +6,17 @@ jobs:
     steps:
     - uses: actions/checkout@master
     #One task
-    - uses: MrRamych/gradle-actions@v4.0-openjdk-8
+    - uses: OrangeLabs-moe/gradle-actions@v5.0-openjdk-8
       with:
         args: test
     #Default task
-    - uses: MrRamych/gradle-actions@v4.0-openjdk-8
+    - uses: OrangeLabs-moe/gradle-actions@v5.0-openjdk-8
     #Multiple tasks
-    - uses: MrRamych/gradle-actions@v4.0-openjdk-8
+    - uses: OrangeLabs-moe/gradle-actions@v5.0-openjdk-8
       with:
         args: build test
     #version
-    - uses: MrRamych/gradle-actions@v4.0-openjdk-8
+    - uses: OrangeLabs-moe/gradle-actions@v5.0-openjdk-8
       with:
         args: --version
   testOpenJDK11:
@@ -24,17 +24,17 @@ jobs:
     steps:
       - uses: actions/checkout@master
       #One task
-      - uses: MrRamych/gradle-actions@v4.0-openjdk-11
+      - uses: OrangeLabs-moe/gradle-actions@v5.0-openjdk-11
         with:
           args: test
       #Default task
-      - uses: MrRamych/gradle-actions@v4.0-openjdk-11
+      - uses: OrangeLabs-moe/gradle-actions@v5.0-openjdk-11
       #Multiple tasks
-      - uses: MrRamych/gradle-actions@v4.0-openjdk-11
+      - uses: OrangeLabs-moe/gradle-actions@v5.0-openjdk-11
         with:
           args: build test
       #version
-      - uses: MrRamych/gradle-actions@v4.0-openjdk-11
+      - uses: OrangeLabs-moe/gradle-actions@v5.0-openjdk-11
         with:
           args: --version
   testOpenJDK13:
@@ -42,16 +42,16 @@ jobs:
     steps:
       - uses: actions/checkout@master
       #One task
-      - uses: MrRamych/gradle-actions@v4.0-openjdk-13
+      - uses: OrangeLabs-moe/gradle-actions@v5.0-openjdk-13
         with:
           args: test
       #Default task
-      - uses: MrRamych/gradle-actions@v4.0-openjdk-13
+      - uses: OrangeLabs-moe/gradle-actions@v5.0-openjdk-13
       #Multiple tasks
-      - uses: MrRamych/gradle-actions@v4.0-openjdk-13
+      - uses: OrangeLabs-moe/gradle-actions@v5.0-openjdk-13
         with:
           args: build test
       #version
-      - uses: MrRamych/gradle-actions@v4.0-openjdk-13
+      - uses: OrangeLabs-moe/gradle-actions@v5.0-openjdk-13
         with:
           args: --version
