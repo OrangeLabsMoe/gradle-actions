@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+    - run: echo running on branch ${GITHUB_REF}
     #One task
     - uses: OrangeLabs-moe/gradle-actions@v5.0-openjdk-8
       with:
