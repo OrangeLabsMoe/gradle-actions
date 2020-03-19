@@ -1,4 +1,4 @@
-FROM openjdk:13-jdk-slim
+FROM openjdk:14-jdk-slim
 
 COPY "entrypoint.sh" "/entrypoint.sh"
 ENTRYPOINT ["/entrypoint.sh"]

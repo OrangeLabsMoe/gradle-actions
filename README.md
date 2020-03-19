@@ -10,6 +10,7 @@ Execute [Gradle](https://github.com/gradle/gradle) tasks using wrapper.
 
    JDK|Image
    ---|---
+   OpenJDK 14|`OrangeLabs-moe/gradle-actions@v5.0-openjdk-14`
    OpenJDK 13|`OrangeLabs-moe/gradle-actions@v5.0-openjdk-13`
    OpenJDK 11|`OrangeLabs-moe/gradle-actions@v5.0-openjdk-11`
    OpenJDK 8 |`OrangeLabs-moe/gradle-actions@v5.0-openjdk-8`
@@ -27,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - uses: OrangeLabs-moe/gradle-actions@v5.0-openjdk-13
+    - uses: OrangeLabs-moe/gradle-actions@v5.0-openjdk-14
       with:
         args: test
 ```
