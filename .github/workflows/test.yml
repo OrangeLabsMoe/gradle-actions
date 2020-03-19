@@ -61,16 +61,16 @@ jobs:
     steps:
       - uses: actions/checkout@master
       #One task
-      - uses: RakSrinaNa/gradle-actions@open-jdk-14
+      - uses: OrangeLabs-moe/gradle-actions@v5.0-openjdk-14
         with:
           args: test
       #Default task
-      - uses: RakSrinaNa/gradle-actions@open-jdk-14
+      - uses: OrangeLabs-moe/gradle-actions@v5.0-openjdk-14
       #Multiple tasks
-      - uses: RakSrinaNa/gradle-actions@open-jdk-14
+      - uses: OrangeLabs-moe/gradle-actions@v5.0-openjdk-14
         with:
           args: build test
       #version
-      - uses: RakSrinaNa/gradle-actions@open-jdk-14
+      - uses: OrangeLabs-moe/gradle-actions@v5.0-openjdk-14
         with:
           args: --version
