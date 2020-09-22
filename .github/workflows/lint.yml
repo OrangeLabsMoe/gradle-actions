@@ -1,21 +1,14 @@
 on: push
 name: Lint files
 jobs:
-  shellLint:
-    name: Shell lint
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: bltavares/actions/shfmt@master
-  dockerlint:
-    name: Dockerfile lint
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: bltavares/actions/hadolint@master
-  markdownlint:
-    name: Markdown lint
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: bltavares/actions/mdlint@master
+      - uses: github/super-linter@v3
+        env:
+          DEFAULT_BRANCH: master
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_MD: true
+          VALIDATE_DOCKERFILE: true
+          VALIDATE_YAML: true

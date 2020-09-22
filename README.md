@@ -15,7 +15,7 @@ Execute [Gradle](https://github.com/gradle/gradle) tasks using wrapper.
    OpenJDK 13|`OrangeLabs-moe/gradle-actions@v5.0-openjdk-13`
    OpenJDK 11|`OrangeLabs-moe/gradle-actions@v5.0-openjdk-11`
    OpenJDK 8 |`OrangeLabs-moe/gradle-actions@v5.0-openjdk-8`
-2. By default, `check` task is executed. 
+2. By default, `check` task is executed.
 If you want to change this behaviour, specify `args` field (see example below).
 
 ## Example
